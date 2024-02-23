@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inria+Sans&display=swap');
+
+:root {
+  --background: #0e0d01;
+  --primary: #f35c16;
+  --primary-hover: #f35c1638;
+  --secondary: #49820d;
+  --secondary-hover: #49820d44;
+  --accent: #3dac11;
+  --form-panel: #3d6c0b8f;
+  --font-color: #ecf8f8;
+}
+
+/* body {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; */
+/* } */
+
+.logo {
+  font-family: 'Fira Sans', sans-serif !important;
+  font-size: 3rem !important;
+}
+
+.login-container {
+  font-family: 'Inria Sans', sans-serif !important;
+  color: var(--font-color) !important;
+  background-color: var(--form-panel) !important;
+  width: max(30vw, 20rem) !important;
+  height: 80vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  border-radius: 1.5rem !important;
+  align-items: center !important;
+  padding: 3rem !important;
+  gap: 2rem !important;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.sign-up {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 90% !important;
+  height: 100% !important;
+}
+.inputs {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  height: 80% !important;
+}
+
+.username,
+.password,
+.location {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1vh !important;
+}
+
+.submit-button {
+  color: var(--font-color) !important;
+  background-color: var(--primary) !important;
+  border: none !important;
+  height: 3rem !important;
+  width: 10rem !important;
+  border-radius: 1rem !important;
+  font-size: 1.5rem !important;
+  transition: all 300ms ease-in-out !important;
+}
+.submit-button:hover {
+  color: var(--font-color) !important;
+  background-color: var(--primary-hover) !important;
+  border: solid 2px var(--accent) !important;
+  cursor: pointer !important;
+}
+
+label {
+  padding-left: 1rem !important;
+  font-size: 1.2rem !important;
+}
+input {
+  background-color: var(--secondary) !important;
+  border: none !important;
+  outline: 0px;
+  box-shadow: none;
+  border-radius: 1rem !important;
+  height: 3rem !important;
+  font-size: 1.5rem !important;
+  color: var(--font-color) !important;
+  padding-left: 10px !important;
+  transition: all 300ms ease-in-out !important;
+}
+input:hover {
+  background-color: var(--secondary-hover) !important;
+  outline: #3dac11;
+}
+
+.or {
+  display: flex !important;
+  gap: 10px !important;
+  color: var(--accent) !important;
+}
+hr {
+  width: 13vw !important;
+  color: #ffffff00 !important;
+  background-color: var(--secondary) !important;
+}
+
+.sign-up-google {
+  font-family: 'Fira Sans', sans-serif !important;
+  display: flex !important;
+  width: 100% !important;
+  border: 2px solid var(--font-color) !important;
+  padding: 1rem !important;
+  border-radius: 1rem !important;
+  justify-content: flex-start !important;
+  gap: 25% !important;
+  font-size: 1.3rem !important;
+  transition: all 300ms ease-in-out !important;
+  font-weight: 600 !important;
+}
+.fa-google {
+  width: 10% !important;
+}
+
+.text {
+  width: 90% !important;
+}
+
+.sign-up-google:hover {
+  color: var(--secondary) !important;
+  background-color: var(--font-color) !important;
+  cursor: pointer !important;
+}
