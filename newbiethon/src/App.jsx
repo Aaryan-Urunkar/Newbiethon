@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // import SignUp from './Signup'
 import Layout from './components/Diseases_Page/Layout'
 import Navbar from './components/Navbar'
+import SignUp from './components/SignUp'
 // function App() {
 //   const [count, setCount] = useState(0)
 //   return (
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
     path: '/',
 
     children: [
-      // { index: true, element: <SignUp /> },
+      { index: true, element: <SignUp /> },
       // { path: "login", element: <Login /> },
       {
         path: 'medi',
@@ -37,7 +38,6 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <div>
-      <Navbar />
       <RouterProvider router={router} />
     </div>
   )

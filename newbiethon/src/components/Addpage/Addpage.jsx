@@ -1,9 +1,10 @@
-import React from 'react';
-import './Addpage.css';
-
+import React from 'react'
+import './Addpage.css'
+import Navbar from '../Navbar'
 export const Addpage = () => {
   return (
     <>
+      <Navbar></Navbar>
       <div className="container">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -17,13 +18,15 @@ export const Addpage = () => {
           <Detail id={2} name={'For illness'} type={'text'} />
           <Detail id={3} name={'No of doses'} type={'number'} />
         </div>
-        <button type="submit" className="btn">
-          ADD PRESCRIPTION
-        </button>
+        <a style={{ marginTop: '2rem' }} href="/medi/dashboard">
+          <button type="submit" className="btn">
+            ADD PRESCRIPTION
+          </button>
+        </a>
       </div>
     </>
-  );
-};
+  )
+}
 
 const Detail = (props) => {
   return (
@@ -33,5 +36,5 @@ const Detail = (props) => {
         <input id={'input' + props.id} type={props.type} />
       </div>
     </>
-  );
-};
+  )
+}

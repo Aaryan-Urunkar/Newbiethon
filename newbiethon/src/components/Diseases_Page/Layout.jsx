@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Layout.css'
 import { data } from './disease'
-
+import Navbar from '../Navbar'
 const Layout = () => {
   const [searchValue, setSearchValue] = useState('DISEASE NAME')
   const [desc, setDesc] = useState('')
@@ -18,6 +18,7 @@ const Layout = () => {
 
   return (
     <>
+      <Navbar />
       <div className="container">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />

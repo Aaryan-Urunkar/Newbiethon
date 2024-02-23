@@ -2,9 +2,9 @@ import { useState } from 'react'
 import styles from '../css/Deadlines.module.css'
 const Deadlines = () => {
   const alerts = [
-    { id: 1, alert: 'Lorem should be taken today!' },
-    { id: 2, alert: 'Lorem should be taken today!' },
-    { id: 3, alert: 'Lorem should be taken today!' },
+    { id: 1, alert: 'Soframycin should be taken today!' },
+    { id: 2, alert: 'Paracetamol should be taken today!' },
+    { id: 3, alert: 'Crocin should be taken today!' },
   ]
   const erasePerson = (id) => {
     setDeadline(
@@ -17,7 +17,7 @@ const Deadlines = () => {
   return (
     <div className={styles.box}>
       <h2>Deadlines</h2>
-      <div className={styles.dates}>
+      <div className={styles.dates} style={{ width: '100%' }}>
         {alerts.map((alert) => {
           return (
             <div id={alert.id} className={styles.date}>

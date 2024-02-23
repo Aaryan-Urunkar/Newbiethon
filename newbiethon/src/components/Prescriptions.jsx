@@ -7,27 +7,27 @@ const Prescriptions = () => {
       <ul className="pres">
         <li>
           <BsCapsule />
-          Lorem
-          <span>2-2-2</span>
+          Crocin
+          <span>2-1-0</span>
         </li>
         <li>
           <BsCapsule />
-          Lorem
-          <span>2-2-2</span>
+          Cyclopalm
+          <span>2-0-3</span>
         </li>
         <li>
           <BsCapsule />
-          Lorem
-          <span>2-2-2</span>
+          Azithromycin
+          <span>1-1-0</span>
         </li>
         <li>
           <BsCapsule />
-          Lorem
-          <span>2-2-2</span>
+          Soframycin
+          <span>1-0-1</span>
         </li>
         <li>
           <BsCapsule />
-          Lorem
+          Painkiller
           <span>2-2-2</span>
         </li>
       </ul>
