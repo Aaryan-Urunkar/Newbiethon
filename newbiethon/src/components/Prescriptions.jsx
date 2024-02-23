@@ -1,13 +1,35 @@
+import styles from '../css/Prescriptions.module.css'
+import { BsCapsule } from 'react-icons/bs'
 const Prescriptions = () => {
   return (
-    <div className="box bg-background">
-      <h2 className="text-secondary">Your Prescription</h2>
+    <div className={styles.box}>
+      <h2>Prescriptions</h2>
       <ul className="pres">
-        <li>Lorem </li>
-        <li>Lorem </li>
-        <li>Lorem </li>
-        <li>Lorem </li>
-        <li>Lorem </li>
+        <li>
+          <BsCapsule />
+          Lorem
+          <span>2-2-2</span>
+        </li>
+        <li>
+          <BsCapsule />
+          Lorem
+          <span>2-2-2</span>
+        </li>
+        <li>
+          <BsCapsule />
+          Lorem
+          <span>2-2-2</span>
+        </li>
+        <li>
+          <BsCapsule />
+          Lorem
+          <span>2-2-2</span>
+        </li>
+        <li>
+          <BsCapsule />
+          Lorem
+          <span>2-2-2</span>
+        </li>
       </ul>
     </div>
   )
