@@ -5,12 +5,12 @@ import { Addpage } from './components/Addpage/Addpage'
 import Content from './components/Content'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Login } from '@mui/icons-material'
+import Layout from './components/Diseases_Page/Layout'
 function App() {
-  const [count, setCount] = useState(0)
   return (
     <>
       <Navbar />
-      <Content />
+      <RouterProvider router={router} />
     </>
   )
 }
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         children: [
           { path: 'dashboard', element: <Content /> },
           { path: 'add', element: <Addpage /> },
-          // { path: 'level6', element: <Area51 /> },
+          { path: 'diseases', element: <Layout /> },
           // { path: 'level7', element: <KimJongUn /> },
         ],
       },

@@ -45,6 +45,7 @@ h1:hover {
   margin: auto;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 21px;
+  background-color: white !important;
 }
 .detail p {
   font-weight: bold;
