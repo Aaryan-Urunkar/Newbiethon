@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import './App.css'
-import { Addpage } from './components/Addpage/Addpage'
-import Content from './components/Content'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Login } from '@mui/icons-material'
+import { useState } from 'react';
+import './App.css';
+import { Addpage } from './components/Addpage/Addpage';
+import Content from './components/Content';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import SignUp from './Signup';
 // function App() {
 //   const [count, setCount] = useState(0)
 //   return (
@@ -19,7 +18,7 @@ const router = createBrowserRouter([
     path: '/',
 
     children: [
-      { index: true, element: <Login /> },
+      { index: true, element: <SignUp /> },
       // { path: "login", element: <Login /> },
       {
         path: 'medi',
@@ -32,12 +31,12 @@ const router = createBrowserRouter([
       },
     ],
   },
-])
+]);
 const App = () => {
   return (
     <div>
       <RouterProvider router={router} />
     </div>
-  )
-}
-export default App
+  );
+};
+export default App;
