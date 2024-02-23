@@ -4,6 +4,7 @@ import './App.css'
 import { Addpage } from './components/Addpage/Addpage'
 import Content from './components/Content'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Login } from '@mui/icons-material'
 // function App() {
 //   const [count, setCount] = useState(0)
 //   return (
@@ -18,12 +19,15 @@ const router = createBrowserRouter([
     path: '/',
 
     children: [
+      { index: true, element: <Login /> },
       // { path: "login", element: <Login /> },
       {
-        path: 'meditracker',
+        path: 'medi',
         children: [
           { path: 'dashboard', element: <Content /> },
-          { path: 'prescriptionadd', element: <Addpage /> },
+          { path: 'add', element: <Addpage /> },
+          // { path: 'level6', element: <Area51 /> },
+          // { path: 'level7', element: <KimJongUn /> },
         ],
       },
     ],
