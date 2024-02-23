@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 .dashboard {
   display: grid;
-  grid-template-rows: 60% 40%;
+  grid-template-rows: 55% 45%;
   height: 95vh;
   overflow: hidden;
 }
 .upperGrid {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
-  gap: 2rem;
+  gap: 0.5rem;
   justify-content: space-evenly;
 }
 .topRight {
   display: flex;
   flex-direction: column;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 25px;
+  gap: 1rem;
+  transition: all 0.5s;
 }
 .lowerGrid {
   display: flex;
@@ -25,7 +30,13 @@
 * {
   font-family: 'Inter Tight', sans-serif;
 }
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
+.topRight:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.topRight h2 {
+  transition: all 0.5s;
+}
+.topRight:hover h2 {
+  color: #f35c16;
 }

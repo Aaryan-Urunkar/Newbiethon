@@ -1,0 +1,48 @@
+.box {
+  padding: 2rem;
+  border-radius: 25px;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.5s;
+}
+h2 {
+  text-align: center;
+  transition: all 0.5s;
+  font-size: 2rem !important;
+  color: #f0eee5;
+
+  font-weight: 600 !important;
+}
+.dates {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.date {
+  color: white;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.date button {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.5s;
+}
+.date button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.box:hover h2 {
+  color: #f35c16;
+}
+.box:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

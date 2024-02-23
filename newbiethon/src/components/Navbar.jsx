@@ -1,24 +1,53 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import logo from '../assets/images/logo.png'
-import Notification from './Notifcations'
-import styles from '../css/Notifcation.module.css'
+import { Fragment } from 'react';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import logo from '../assets/images/logo.png';
+import Notification from './Notifcations';
+import styles from '../css/Notifcation.module.css';
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
   { name: 'Add Prescription', href: '#', current: false },
   { name: 'Notification', href: '#', current: false },
   { name: 'Common Diseases', href: '#', current: false },
-]
+];
 const notifications = [
   { title: 'Prescription running out for lorem ❗', href: '', key: 1 },
   { title: 'Prescription running out for lorem ❗', href: '', key: 2 },
   { title: 'Prescription running out for lorem ❗', href: '', key: 3 },
   { title: 'Prescription running out for lorem ❗', href: '', key: 4 },
-]
+];
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
+const navBar = () => {
+  const options = document.querySelector('a');
+  options.forEach((option) => {
+    option.addEventListener('click', () => {
+      removeSelected();
+      option.class = classNames(
+        'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium'
+      );
+    });
+  });
+};
+
+const removeSelected = () => {
+  const options = document.querySelectorAll('.option');
+
+  options.forEach((option) => {
+    option.classList = classNames(
+      'text-gray-300 hover:bg-gray-700 hover:text-white option rounded-md px-3 py-2 text-sm font-medium option'
+    );
+  });
+};
+
+const changeStatus = (e) => {
+  removeSelected();
+  e.target.classList = classNames(
+    'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium option'
+  );
+  console.log(e.target.classList);
+};
 
 export default function Navbar() {
   return (
@@ -54,12 +83,10 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          'text-gray-300 hover:bg-gray-700 hover:text-white option rounded-md px-3 py-2 text-sm font-medium option'
                         )}
                         aria-current={item.current ? 'page' : undefined}
+                        onClick={(event) => changeStatus(event)}
                       >
                         {item.name}
                       </a>
@@ -109,7 +136,7 @@ export default function Navbar() {
                               </a>
                             )}
                           </Menu.Item>
-                        )
+                        );
                       })}
                       {/* <Menu.Item>
                         {({ active }) => (
@@ -245,5 +272,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
