@@ -11,11 +11,13 @@ h1{
     display: inline-block;
     font-family: 'Poppins';
     color : #f0eee5;
-    font-weight: bold;
+    font-weight: bold !important;
     background-color: #b6420c;
     border-radius: 2rem;
     padding: 1rem;
     transition: color .3s, background-color .3s;
+    margin: 2rem !important;
+    font-size: 25px !important;
 }
 
 h1:hover{
@@ -29,6 +31,7 @@ h1:hover{
     display : flex;
     flex-direction : column;
     align-items: center;
+    margin-top:3rem;
 }
 
 .detail input{
@@ -48,6 +51,7 @@ h1:hover{
     padding: 1rem;
     font-size: 20px;
     transition: color .3s, background-color .3s;
+    margin: 2rem !important;
 }
 
 .detail p:hover{
