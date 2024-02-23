@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import './App.css'
-import {Addpage} from './components/Addpage/Addpage'
+import { Layout } from './components/Diseases_Page/Layout'
 function App() {
   const [count, setCount] = useState(0)
   return (
     <>
       <Navbar />
-      <Addpage/>
+      <Layout />
     </>
   )
 }
