@@ -1,5 +1,5 @@
 import './App.css'
-import {Addpage} from '../Addpage/Addpage.jsx'
+import {Addpage} from '../../newbiethon/src/components/Addpage/Addpage.jsx'
 
 function App() {
 
