@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+.dashboard {
+  display: grid;
+  grid-template-rows: 60% 40%;
+  height: 95vh;
+  overflow: hidden;
+}
+.upperGrid {
+  margin-top: 4rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+.topRight {
+  display: flex;
+  flex-direction: column;
+}
+.lowerGrid {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+* {
+  font-family: 'Inter Tight', sans-serif;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
