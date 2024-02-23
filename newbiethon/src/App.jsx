@@ -1,25 +1,26 @@
 import { useState } from 'react'
-import Navbar from './components/Navbar'
 import './App.css'
 import { Addpage } from './components/Addpage/Addpage'
 import Content from './components/Content'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Login } from '@mui/icons-material'
+// import SignUp from './Signup'
 import Layout from './components/Diseases_Page/Layout'
-function App() {
-  return (
-    <>
-      <Navbar />
-      <RouterProvider router={router} />
-    </>
-  )
-}
+import Navbar from './components/Navbar'
+// function App() {
+//   const [count, setCount] = useState(0)
+//   return (
+//     <>
+//       <Navbar />
+//       <Content />
+//     </>
+//   )
+// }
 const router = createBrowserRouter([
   {
     path: '/',
 
     children: [
-      { index: true, element: <Login /> },
+      // { index: true, element: <SignUp /> },
       // { path: "login", element: <Login /> },
       {
         path: 'medi',
@@ -33,4 +34,12 @@ const router = createBrowserRouter([
     ],
   },
 ])
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+      <RouterProvider router={router} />
+    </div>
+  )
+}
 export default App

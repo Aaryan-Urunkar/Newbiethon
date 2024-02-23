@@ -10,8 +10,7 @@ import Navbar from './Navbar'
 const Content = () => {
   return (
     <>
-      {/* <Navbar /> */}
-      <div className={styles.dashboard}>
+      <div className={styles.dashboard} style={{ width: '100%' }}>
         <div className={styles.upperGrid}>
           <Prescriptions />
           <Deadlines />

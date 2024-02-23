@@ -19,17 +19,6 @@ const notifications = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-const navBar = () => {
-  const options = document.querySelector('a')
-  options.forEach((option) => {
-    option.addEventListener('click', () => {
-      removeSelected()
-      option.class = classNames(
-        'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium'
-      )
-    })
-  })
-}
 
 const removeSelected = () => {
   const options = document.querySelectorAll('.option')
@@ -51,7 +40,7 @@ const changeStatus = (e) => {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-background">
+    <Disclosure as="nav" className="bg-background" style={{ width: '100%' }}>
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
